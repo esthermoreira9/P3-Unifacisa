@@ -21,4 +21,9 @@ public class ContaPoupanca extends Conta{
 		setSaldo(total);
 	}
 
+	@Override
+	public void setValorLimite(float valor) {
+		setValorLimite(valor);
+	}
+
 }

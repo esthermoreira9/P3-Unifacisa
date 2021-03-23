@@ -25,6 +25,8 @@ public abstract class Conta {
 	
 	public abstract void depositar(double valor);
 
+	public abstract void setValorLimite(float valor);
+
 	public void setValorLimite(double valorLimite) {
 		this.valorLimite = valorLimite;
 	}
