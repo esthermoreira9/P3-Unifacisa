@@ -21,11 +21,10 @@ public abstract class Conta {
 		this.valorLimite = valorLimite;
 	}
 
-	public abstract void sacar(double valor);
+	public abstract void sacar(double valor) throws IllegalArgumentException, SaldoInsuficienteException;
 	
-	public abstract void depositar(double valor);
+	public abstract void depositar(double valor) throws IllegalArgumentException;
 
-	public abstract void setValorLimite(float valor);
 
 	public void setValorLimite(double valorLimite) {
 		this.valorLimite = valorLimite;
