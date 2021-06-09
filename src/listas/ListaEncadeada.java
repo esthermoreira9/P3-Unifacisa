@@ -35,7 +35,49 @@ public class ListaEncadeada {
 	}
 	
 	public void addIndex(int index, Conta novoItem) {
-		
+		Conta temp = cabeca;
+
+        boolean validada = validaIndex(index);
+        if(validada) {
+            if(inseridos == 0 && index == 0) {
+                addCabeca(novoItem);
+            } else if(index == inseridos) {
+                addCalda(novoItem);
+            } else {
+                for (int i = 0; i < inseridos-1; i++) {
+                    temp = temp.proximo;
+                } 
+                Conta anterior = temp;
+                temp = novoItem;
+                novoItem.proximo = anterior;
+            }
+            inseridos++;
+
+        } else {
+            System.out.println("Posição inválida");
+            return;
+        }
+	}
+	
+	public boolean validaIndex(int index) {
+        if(index >= 0 && index <= inseridos) {
+            return true;
+        }
+        return false;
+    }
+	
+	public void removeCabeca(Conta novoItem) {
+		if(inseridos == 1) {
+			cabeca = null;
+		}
+		else if(inseridos == 0){
+			System.out.println("Não existem elementos a serem removidos");
+		}
+		else {
+			cabeca = null;
+			cabeca = cabeca.proximo;
+		}
+		inseridos--;
 	}
 	
 	public int tamanho() {

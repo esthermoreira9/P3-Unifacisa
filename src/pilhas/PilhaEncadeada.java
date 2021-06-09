@@ -20,7 +20,6 @@ public class PilhaEncadeada {
 	}
 
 	public Conta pop() {
-		
 		Conta topElement = null;
 		
 		if(inseridos > 0) {
