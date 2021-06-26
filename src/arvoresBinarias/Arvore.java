@@ -1,12 +1,12 @@
 package arvoresBinarias;
 
 public class Arvore {
-	private int folha;
 	private No raiz;
 	
 	public boolean isEmpty() {
 		return raiz == null;
 	}
+	
 	
 	public void inserir(int valor) {
 		inserir(this.raiz, valor);
@@ -31,19 +31,6 @@ public class Arvore {
 			}
 		}
 	}
-
-    public int quantidadeFolhas(No no) {
-        
-        if(no.getDireita() == null && no.getEsquerda() == null) {
-            folha++;
-        } 
-
-        if(no != null) {
-            quantidadeFolhas(no.getEsquerda());
-            quantidadeFolhas(no.getDireita());
-        }
-        return folha;
-    }
     
     public void preOrdem(No no) {
     	if(no != null) {
@@ -52,18 +39,12 @@ public class Arvore {
     		preOrdem(no.getDireita());
     	}
     }
-    public void emOrdem(No no) {
-    	if(no != null) {
-    		emOrdem(no.getEsquerda());
-    		System.out.println(no.getCodigo());
-    		emOrdem(no.getDireita());
+    
+    public No getRaiz(No novoNo) {
+    	if(novoNo.getPai() == null) {
+    		return novoNo;
     	}
+    	return getRaiz(novoNo.getPai());
     }
-    public void posOrdem(No no) {
-    	if(no != null) {
-    		posOrdem(no.getEsquerda());
-    		posOrdem(no.getDireita());
-    		System.out.println(no.getCodigo());
-    	}
-    }
+
 }

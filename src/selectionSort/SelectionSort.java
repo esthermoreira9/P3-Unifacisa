@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class SelectionSort {
 	public static void main(String[] args) {
 
-		int[] array = new int[] { 18, 10, 15, 3, 5 };
+		int[] array = new int[] {13,3,1,1,15,8};
 		int ordenados = 0;
 
 		for (int j = 0; j < array.length; j++) {

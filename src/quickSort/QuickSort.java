@@ -6,7 +6,7 @@ public class QuickSort {
 	 
     public static void main(String[] args) {
         
-        int[] vetorDesordenado = new int[] {10,12,1,15,2};
+        int[] vetorDesordenado = new int[] {13,3,1,1,5,8};
         
         ordenar(vetorDesordenado);
         

@@ -67,4 +67,8 @@ public class DequeEncadeado {
 	public int tamanho() {
 		return inseridos;
 	}
+	
+	public boolean isEmpty() {
+        return inseridos == 0;
+    }
 }

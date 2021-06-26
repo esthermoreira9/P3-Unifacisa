@@ -13,7 +13,7 @@ public class BubbleSort {
 					array[j] = temp;
 				}
 			}
-			//System.out.println("Iteracao " + (i + 1) + " \n Resultado: " + Arrays.toString(array));
+			System.out.println("Iteracao " + (i + 1) + " \n Resultado: " + Arrays.toString(array));
 		}
 		return array;
 	}
@@ -23,8 +23,8 @@ public class BubbleSort {
 		int[] array = { 3, 5, 7, 9, 1, 8 };
 		int[] arrayOrdenado = ordenar(array);
 
-		String arrayOrdenadoString = Arrays.toString(arrayOrdenado);
+		//String arrayOrdenadoString = Arrays.toString(arrayOrdenado);
 
-		System.out.println(arrayOrdenadoString);
+		//System.out.println(arrayOrdenadoString);
 	}
 }

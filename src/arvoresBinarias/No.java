@@ -3,6 +3,7 @@ package arvoresBinarias;
 public class No {
 	private No direita;
     private No esquerda;
+    private No pai;
     private int codigo;
 
     public No(int codigo) {
@@ -27,5 +28,9 @@ public class No {
 
 	public void setEsquerda(No esquerda) {
 		this.esquerda = esquerda;
+	}
+	
+	public No getPai() {
+		return pai;
 	}
 }
